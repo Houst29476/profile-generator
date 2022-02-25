@@ -9,7 +9,7 @@ test("Can instantiate Intern instance", () => {
 
 test("getRole() should return \"Intern\"", () => {
   const testValue = "Intern";
-  const e = new Intern("Foo", 1, "test@test.com", "UCLA");
+  const e = new Intern("Bill", 1, "test@test.com", "UCLA");
   expect(e.getRole()).toBe(testValue);
 });
 
