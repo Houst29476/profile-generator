@@ -1,4 +1,3 @@
-const {renderManager, renderEngineer, renderIntern, render} = require("./lib/htmlRenderer"); 
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -9,7 +8,7 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "prod");
 const outputPath = path.join(OUTPUT_DIR, "prod.html");
 
-// const render = require("./lib/htmlRenderer");
+const render = require("./lib/htmlRenderer");
 
 const memberType = [];
 const teamID = [];
@@ -43,9 +42,7 @@ function createManager() {
 
     ]).then(answers => {
       const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
-      let myManager = renderManager(manager);
-      render(myManager);
-      memberType.push(myManager);
+      memberType.push(manager);
       teamID.push(answers.managerId);
       generateTeam();
     });
