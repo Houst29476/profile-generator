@@ -14,10 +14,10 @@ const memberType = [];
 const teamID = [];
 
 function nodeApp() {
+console.log("Let's build your dream team!");
 
 // -------- Manager Questions -------- //
 function createManager() {
-    console.log("Let's build your dream team!");
     inquirer.prompt([
       {
         type: "input",
@@ -48,8 +48,8 @@ function createManager() {
     });
   }
 
-// -------- Engineer Questions -------- //
-function createEngineer() {
+  // -------- Engineer Questions -------- //
+  function createEngineer() {
     inquirer.prompt([
       {
         type: "input",
@@ -63,17 +63,17 @@ function createEngineer() {
       },
       {
         type: "input",
-        name: "engineerGithub",
-        message: "(3) What is your engineer's GitHub username?",
+        name: "engineerEmail",
+        message: "(3) What is your engineer's email address?",
       },
       {
         type: "input",
-        name: "engineerEmail",
-        message: "(4) What is your engineer's email?",
+        name: "engineerGithub",
+        message: "(4) What is your engineer's GitHub username?",
       }
 
     ]).then(answers => {
-      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerGithub, answers.engineerEmail);
+      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
       memberType.push(engineer);
       teamID.push(answers.engineerId);
       generateTeam();
