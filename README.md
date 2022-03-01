@@ -1,5 +1,7 @@
 ![team-profile-generator](https://user-images.githubusercontent.com/95327275/156053342-b3d8f1b8-6d40-4a03-b732-6d60d25be8d5.png)
 
+https://user-images.githubusercontent.com/95327275/156208721-a5f99436-27b9-4d58-b6ad-c9b19e3e76af.mp4
+
 # Table of Contents
 
 - [GitHub Profile](#GitHub-Profile)
